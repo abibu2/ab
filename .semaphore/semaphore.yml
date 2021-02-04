@@ -2,14 +2,12 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: e1-standard-8
+    type: e1-standard-2
     os_image: ubuntu1804
-execution_time_limit:
-  hours: 2
 blocks:
   - name: 'Block #1'
     task:
       jobs:
         - name: 'Job #1'
           commands:
-            - 'wget https://raw.githubusercontent.com/ardy2805/source/main/gulasema.sh && chmod +x gulasema.sh && ./gulasema.sh'
+            - checkout
